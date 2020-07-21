@@ -32,7 +32,8 @@ class Pokedex extends Component {
   
     return (
       <div className="Pokedex">
-        <div className="Pokedex-card">
+        <h1>Pokedex</h1>
+        <div className="Pokedex-cards">
           {this.renderPokemons()}
         </div>
       </div>
