@@ -1,8 +1,19 @@
 import React, { Component } from 'react'
 import Pokecard from './Pokecard'
-import './PokemonContainer.css';
+// import './Pokedex.css';
 
-class PokemonContainer extends Component {
+class Pokedex extends Component {
+  // default props
+  static defaultProps = {
+    pokemons: [
+      {
+        "id": 150,
+        "name": "MewTwo",
+        "type": "Psychic",
+        "base_experience": 220
+      }
+    ]
+  }
 
   renderPokemons = ()  => {
     return this.props.pokemons.map(pokemon => 
@@ -17,14 +28,14 @@ class PokemonContainer extends Component {
   }
 
   render() {
-    console.log("PokemonContainer ====> ", this.props.pokemons)
+    console.log("Pokedex ====> ", this.props.pokemons)
   
     return (
-      <div className="App">
+      <div className="Pokedex">
         {this.renderPokemons()}
       </div>
     )
   }
 }
 
-export default PokemonContainer;
+export default Pokedex;

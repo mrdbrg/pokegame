@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PokemonContainer from './PokemonContainer';
+import Pokedex from './Pokedex';
 import './App.css';
 
 class App extends Component {
@@ -21,7 +21,9 @@ class App extends Component {
   render() {
     console.log(this.state.pokemons)
     return (
-      <PokemonContainer pokemons={this.state.pokemons} />
+      <div className="App">
+        <Pokedex pokemons={this.state.pokemons} />
+      </div>
     )
   }
 }
