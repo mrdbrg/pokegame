@@ -27,14 +27,21 @@ class Pokedex extends Component {
     )
   }
 
+  displayTitle = () => {
+    if (this.props.isWinner) {
+      return <h1 className="Pokedex-winner">Winning Hand</h1>
+    } else {
+      return <h1 className="Pokedex-loser">Losing Hand</h1>
+    }
+  }
+
   render() {
     console.log("Pokedex ====> ", this.props.pokemons)
   
     return (
       <div className="Pokedex">
-        <h1>Pokedex</h1>
-        <p>Total Experience: {this.props.exp}</p>
-        <p>{this.props.isWinner ? "WINNER" : "LOSER"}</p>
+        {this.displayTitle()}
+        <h4>Total Experience: {this.props.exp}</h4>
         <div className="Pokedex-cards">
           {this.renderPokemons()}
         </div>
